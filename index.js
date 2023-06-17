@@ -13,6 +13,7 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let playerEl = document.getElementById("player-el");
 let loggedIn = false;
+let rulesVisible = false;
 
 playerEl.textContent = player.name + ": $" + player.chips;
 
@@ -75,5 +76,17 @@ function newCard() {
     sum += card;
     cards.push(card);
     renderGame();
+  }
+}
+
+function toggleRules() {
+  if (!rulesVisible) {
+    document.getElementById("rules").style.display = "block";
+    document.getElementById("rules-btn").innerHTML = "Hide rules";
+    rulesVisible = true;
+  } else {
+    document.getElementById("rules").style.display = "none";
+    document.getElementById("rules-btn").innerHTML = "Show rules";
+    rulesVisible = false;
   }
 }

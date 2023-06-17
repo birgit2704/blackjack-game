@@ -21,7 +21,13 @@
         <button id="new-card-btn" onclick="newCard()">NEW CARD</button>
         <p id="player-el"></p>
       </div>
-      <button id="rules-btn" onclick="showRules()">Show rules</button>
+      <button id="rules-btn" onclick="toggleRules()">Show rules</button>
+      <div id="rules">
+        <p>Your initial credit is $100</p>
+        <p>If you have Blackjack, you get $100</p>
+        <p>If your score is higher than 21, we take $20 off your credit</p>
+        <p>If you remain under 21 we take $5 off your credit</p>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>

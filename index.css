@@ -55,3 +55,9 @@ button {
   margin-left: auto;
   text-decoration: underline;
 }
+
+#rules {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+}
