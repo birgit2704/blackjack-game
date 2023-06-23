@@ -1,7 +1,7 @@
 # blackjack-game
 
 built during the scrimba Frontend Developer Career Path  
-[screenshot](screenshot.jpg)
+![screenshot](screenshot.jpg)
 
 Quick start:
 
