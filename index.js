@@ -1,6 +1,6 @@
 let player = {
   name: "Player's name",
-  chips: 100,
+  chips: 0,
 };
 
 let cards = [];
@@ -33,6 +33,7 @@ function login() {
     messageEl.textContent =
       "You are already logged in, you can start the game.";
   else {
+    player.chips = 100;
     player.name = prompt("What is your name?");
     playerEl.textContent = player.name + ": $" + player.chips;
     loggedIn = true;
@@ -41,8 +42,12 @@ function login() {
 
 function startGame() {
   if (!loggedIn) messageEl.textContent = "PLEASE LOG IN FIRST";
-  else {
+  else if (player.chips <= 0) {
+    messageEl.textContent = "YOU ARE OUT OF CREDIT - SEE YOU SOON!";
+    loggedIn = false;
+  } else {
     isAlive = true;
+    hasBlackJack = false;
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
     cards = [firstCard, secondCard];
